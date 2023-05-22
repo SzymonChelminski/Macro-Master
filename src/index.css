@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Little Adjustments */
+
+.header,
+.content_footer,
+.content_header,
+.popUp_header
+{
+background-color: #2d3965;
+transition: .5s;
+}
+
+.protein_macro_meal{
+    color: rgb(0, 104, 189);
+    margin-right: 1.5px;
+}
+
+.carbohydrates_macro_meal{
+    color: rgb(162, 89, 0);
+    margin-right: 1.5px;
+}
+
+.fats_macro_meal{
+    color: rgb(242, 113, 0);
+    margin-right: 1.5px;
+}
+
+/* HEADER */
+
+.header{
+    height: 9vh;
+    width: 100%;
+    font-size: 3vh;
+    color: white;
+    border-radius: 0px 0px 22px 22px;
+    box-shadow: gray 0px 1px 10px 2px;
+}
+
+.brand_name{
+    height: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+.fa-burger{
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(0deg, rgba(255,190,0,1) 0%, rgba(255,111,111,1) 50%, rgba(255,194,0,1) 100%);
+}
+
+.macro_master{
+    font-weight: 900;
+}
+
+.master{
+    color: rgb(255, 187, 0);
+}
+
+.fa-gear{
+    cursor: pointer;
+}
+
+/* CONTENT  */
+
+.content{
+    height: 90.5vh;
+    width: 100vw;
+    border-radius: 20px 20px 0px 0px;
+    margin-top: 0.5vh;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    background-color: white;
+}
+
+.content_header{
+    height: 7vh;
+    font-size: 2.75vh;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2.5vh;
+    padding-right: 2.5vh;
+}
+
+.letter_spacing_el{
+    letter-spacing: -2px;
+}
+
+.vertical_bar{
+    color: rgb(255, 187, 0);
+}
+
+.total_kcal{
+    font-weight: 400;
+    color: rgb(0, 217, 0);
+    letter-spacing: -1px;
+}
+
+.fa-user-pen{
+    cursor: pointer;
+}
+
+.content_body{
+    height: 75vh;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(1,1fr);
+    transition: .5s;
+}
+
+.meal_el{
+    width: 97.5vw;
+    height: 12.5vh;
+    font-size: 3.25vh;
+    font-weight: 600;
+    border-radius: 2vh;
+    box-shadow: rgb(176, 176, 176) 1px 3px 7px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2.5vh;
+    padding-right: 2.5vh;
+}
+
+.meal_kcal{
+    font-size: 2vh;
+    font-weight: 500;
+    color: rgb(5, 207, 5);
+}
+
+.meal_macro{
+    margin-left: 1.25vw;
+    color: rgb(155, 155, 155);
+}
+
+.buttons_meal{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5vh;
+}
+
+.buttons_meal i:nth-child(1){
+    color: black;
+    transition: 0.25s;
+}
+
+.buttons_meal i:nth-child(1):hover{
+    color: red;
+}
+
+.buttons_meal i:nth-child(2){
+    color: rgb(0, 217, 0);
+}
+
+.content_footer{
+    height: 8.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+}
+
+/* FOOTER */
+
+.footer_macro{
+    font-size: 2.15vh;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    gap: 0.75vh;
+}
+
+.proteins, .carbohydrates, .fats{
+    height: 2vh;
+    width: 20vw;
+    border-radius: 0.75vh;
+    font-size: 1.5vh;
+    font-weight: 500;
+    color: black;
+    background-color: white;
+    overflow: hidden;
+}
+
+.macro_level{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    text-align: center;
+    z-index: 1;
+}
+
+.proteins_level, .carbohydrates_level, .fats_level{
+    height: 120%;
+    width: 0%;
+    position: relative;
+    bottom: 2vh;
+}
+
+.proteins_level{
+    background-color: aqua;
+}
+
+.carbohydrates_level{
+    background-color: wheat;
+}
+
+.fats_level{
+    background-color: gold;
+}
+
+/* POPUP */
+
+.popUp{
+    height: 50vh;
+    width: 40vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+    margin: auto;
+    background-color: white;
+    box-shadow: gray 5px 5px 5px 5px;
+}
+
+.popUp_header{
+    height: 15%;
+    border-radius: 10px 10px 0 0;
+}
+
+.search_container{
+    height: 3vh;
+    font-size: 3vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+}
+
+.searchbar{
+    width: 60%;
+    font-size: 1.5vh;
+    padding-left: 1vh;
+    border: transparent;
+    border-radius: 5px;
+}
+
+.fa-check{
+    color: rgb(0, 217, 0);
+    cursor: pointer;
+}
+
+.fa-xmark{
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+}
+
+.popUp_label{
+    height: 85%;
+    border-radius: 0 0 10px 10px;
+    overflow: scroll;
+}
+
+.popUp_label::-webkit-scrollbar{
+    display: none;
+}
+
+.label_header{
+    font-weight: 900;
+    display: grid;
+    place-items: center;
+    margin-top: 10px;
+}
+
+.label_header_facts{
+    font-size: 200%;
+    letter-spacing: -2px;
+}
+
+.label_hr_extra{
+    height: 0.5vh;
+    width: 95%;
+    background-color: rgb(220, 220, 220);
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+}
+
+.label_header_serving{
+    font-size: 125%;
+    margin-top: 5px;
+}
+
+.lable_element{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lable_macro{
+    padding: 1.1vh;
+    margin-left: 0.25vh;
+}
+
+.lable_quantity{
+    padding: 1.1vh;
+    margin-right: 0.5vh;
+}
+
+.kcal{
+    font-size: 150%;
+}
+
+.bold{
+    font-weight: 950;
+}
+
+.label_sub_macro{
+    font-weight: 500;
+}
+
+.label_hr{
+    height: 0.25vh;
+    width: 95%;
+    background-color: rgb(220, 220, 220);
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.deletePopUp{
+    width: 40vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: gray 4px 4px 5px 4px;
+}
+
+.header_deletePopUp{
+    height: 5vh;
+    font-size: 2.5vh;
+    font-weight: 500;
+    color: white;
+    letter-spacing: -1px;
+    display: grid;
+    place-items: center;
+    box-shadow: gray 5px 5px 5px 5px;
+    background-color: #ff0000;
+}
+.item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 2.5vh;
+    justify-content: space-between;
+    background-color: white;
+    transition: 0.25s;
+    font-size: 2vh;
+}
+
+.item:hover{
+    background-color: rgb(238, 238, 238);
+    cursor: pointer;
+}
+
+.item_name{
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.item_kcal{
+    color: rgb(0, 217, 0);
+}
+
+.item_protein{
+    color: rgb(0, 104, 189);
+}
+
+.item_carbohydrates{
+    color: rgb(162, 89, 0);
+}
+
+.item_fats{
+    color: rgb(242, 113, 0);
+}
+
+.options{
+    height: 8vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #2d3965;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    overflow: hidden;
+}
+
+.options_header{
+    font-size: 1.65vh;
+    font-weight: 600;
+    padding: 1vh;
+    height: 50%;
+}
+
+.dark_mode{
+    font-size: 1.65vh;
+    font-weight: 500;
+    padding: 1vh;
+    background-color: black;
+    cursor: pointer;
+    transition: .3s;
+}
+
+
+.body_input{
+    height: 32vh;
+    width: 22vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    box-shadow: gray 4px 4px 5px 4px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.body_input_header{
+    height: 12%;
+    width: 100%;
+    font-size: 1.8vh;
+    font-weight: 500;
+    color: white;
+    letter-spacing: -0.35px;
+    display: grid;
+    place-items: center;
+    background-color: #2d3965;
+}
+
+.body_input_content{
+    height: 88%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+}
+
+.body_input_el{
+    font-size: 1.65vh;
+    font-weight: 600;
+    display: grid;
+    place-items: center;
+    gap: 0.5vh;
+}
+
+.body_input_el input{
+    height: 2.25vh;
+    max-width: 80%;
+    font-weight: 500;
+    text-align: center;
+    border: 2px solid #2d3965;
+    border-radius: 6px;
+    padding: 10px 0px 10px 0px;
+}
+
+.body_input_content button{
+    height: 8%;
+    width: 32%;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: transparent;
+    border-radius: 0.5vh;
+    background-color: orange;
+    padding: 10px 7px 10px 7px;
+}
+
+.body_input_content button:hover{
+    border: 2px solid gray;
+}
+
+.body_input_content button:active{
+    border: 2px solid black;
+}
+
+.body_input_header i{
+    position: relative;
+    left: 1vh;
+    font-size: 1.5vh;
+}
+
+
