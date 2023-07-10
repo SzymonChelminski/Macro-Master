@@ -172,6 +172,7 @@ transition: .5s;
     align-items: center;
     justify-content: space-around;
     color: white;
+    position: relative;
 }
 
 /* FOOTER */
